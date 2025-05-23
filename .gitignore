@@ -1,8 +1,9 @@
 .cache
+.config
 .dotfiles
 .mozilla
 .local
-.config/*
+.ssh
 
 
 !.config/nvim
