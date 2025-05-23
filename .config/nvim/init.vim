@@ -1,30 +1,17 @@
 " Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'arnaud-lb/vim-php-namespace'
-Plug 'brookhong/cscope.vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'janko-m/vim-test'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'milkypostman/vim-togglelist'
-Plug 'neomake/neomake'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'chriskempson/base16-vim'
-
-" Broken: caused a large error log when saving files
-"Plug 'php-vim/phpcd.vim', { 'for': 'php' , 'do': 'composer update' }
-
-" Issue with vim-php-namespace
-" https://github.com/airblade/vim-gitgutter/issues/351
-" Plug 'airblade/vim-gitgutter'
-"Plug 'airblade/vim-gitgutter'
+Plug 'luisiacc/gruvbox-baby', {'branch': 'main'}
 
 " Initialize plugin system
 call plug#end()
@@ -84,62 +71,20 @@ noremap <Leader>fa :grep -rn --exclude={tags,.php_cs.cache} --exclude-dir={vendo
 " Exit terminal
 :tnoremap <Esc> <C-\><C-n>
 
+" Expand current path
+noremap <Leader>p :put=expand('%:p')<CR>
+
 " Plugins config
 
 " Use Airline as the tab manager
 let g:airline#extensions#tabline#enabled = 1
 
-" Run neomake on all saves
-autocmd! BufWritePost * Neomake
-
-" janko-m/vim-test
-nmap <silent> <leader>tn :TestNearest<CR>
-nmap <silent> <leader>tf :TestFile<CR>
-nmap <silent> <leader>ts :TestSuite<CR>
-nmap <silent> <leader>tl :TestLast<CR>
-nmap <silent> <leader>tv :TestVisit<CR>
-
-" Phpcs options in neomake
-function! neomake#makers#ft#php#phpcs() abort
-    return {
-        \ 'args': 
-            \ '--report=csv ',
-        \ 'errorformat':
-            \ '%-GFile\,Line\,Column\,Type\,Message\,Source\,Severity%.%#,'.
-            \ '"%f"\,%l\,%c\,%t%*[a-zA-Z]\,"%m"\,%*[a-zA-Z0-9_.-]\,%*[0-9]%.%#',
-        \ }
-endfunction
-
 " Color scheme
 set termguicolors
-let g:airline_theme='base16_default'
-colorscheme base16-default-dark
+let g:airline_theme='base16_gruvbox_dark_hard'
+colorscheme gruvbox-baby
 highlight Normal ctermbg=NONE guibg=NONE
 highlight NonText ctermbg=NONE guibg=NONE
-
-" Php namespace
-function! IPhpInsertUse()
-    call PhpInsertUse()
-    call feedkeys('a',  'n')
-endfunction
-autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
-autocmd FileType php noremap <Leader>s :call PhpSortUse()<CR>
-
-let g:php_namespace_sort = "'{,'}-1sort i"
-
-" Gutentags
-let g:gutentags_ctags_executable_php = 'ctags -R --language=php --php-kinds=cfit'
-
-" Cscope
-let g:cscope_ignored_dir = 'vendor'
-
-" Clover code coverage XML file
-let g:phpqa_codecoverage_file = "clover.xml"
-let g:phpqa_messdetector_autorun = 0
-let g:phpqa_codesniffer_autorun = 0
-let g:phpqa_codecoverage_autorun = 1
-let g:phpqa_open_loc = 0
-
 
 " Hack to get netrw to close the buffer when we pick a file
 " ref: https://github.com/tpope/vim-vinegar/issues/13#issuecomment-315584214
@@ -154,7 +99,3 @@ augroup netrw_buf_hidden_fix
                 \| endif
 
 augroup end
-
-" Expand current path
-noremap <Leader>p :put=expand('%:p')<CR>
-

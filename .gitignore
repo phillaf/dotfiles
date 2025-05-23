@@ -1,11 +1,15 @@
-.cache
-.config
-.dotfiles
-.mozilla
-.local
-.ssh
+/*
 
+.gitignore
+README.md
 
 !.config/nvim
+!.config/nvim/**
 .config/nvim/.netrwhist
 .config/nvim/plugged/
+
+!.bashrc.d
+!.bashrc.d/**
+
+!scripts
+!scripts/**
