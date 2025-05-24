@@ -30,4 +30,7 @@ done
 echo "- Backing up xkb-options (keyboard layout tweaks)..."
 gsettings get org.gnome.desktop.input-sources xkb-options > "$BACKUP_DIR/xkb-options.conf"
 
+echo "- Backing up windows-manager keybindings..."
+dconf dump /org/gnome/desktop/wm/keybindings/ > "$BACKUP_DIR/wm-keybindings.dconf"
+
 echo "Backup complete. Files saved to $BACKUP_DIR"

@@ -19,5 +19,9 @@ bash "$BACKUP_DIR/launcher-hotkeys.dump"
 echo "- Restoring xkb-options (keyboard layout tweaks)..."
 gsettings set org.gnome.desktop.input-sources xkb-options "$(cat "$BACKUP_DIR/xkb-options.conf")"
 
+
+echo "- Restoring windows manager keybindings..."
+dconf load /org/gnome/desktop/wm/keybindings/ < "$BACKUP_DIR/wm-keybindings.dconf"
+
 echo "GNOME keybindings and launcher hotkeys restored."
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo dnf update -y
-sudo dnf install -y neovim fzf
+sudo dnf install -y neovim fzf ripgrep
 
 echo "Installation complete!"
 

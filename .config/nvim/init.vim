@@ -99,3 +99,8 @@ augroup netrw_buf_hidden_fix
                 \| endif
 
 augroup end
+
+" fzf
+nnoremap <Leader>f :Files<CR>
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
+
