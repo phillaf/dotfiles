@@ -12,6 +12,8 @@ if ! groups "$USER" | grep -q docker; then
     echo "You need to log out and back in for the group changes to take effect."
 fi
 
+newgrp docker
+
 echo "Docker installes. Version:"
 docker --version
 
