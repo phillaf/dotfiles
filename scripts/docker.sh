@@ -19,3 +19,5 @@ docker --version
 
 echo "Docker Compose version:"
 docker-compose --version
+
+echo "Reboot the computer for group changes to take effectQ"
