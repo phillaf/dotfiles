@@ -3,13 +3,43 @@
 .gitignore
 README.md
 
+# Keep the folders nested under .config, but not the loose files
+!.config/
+!.config/**/
+.config/*
+!.config/**/
+
+# Softwares I don't want to backup
+.config/dconf
+.config/evolution
+.config/flameshot
+.config/goa-1.0
+.config/gtk-3.0
+.config/ibus
+.config/org.gnome.Ptyxis
+.config/pulse
+
+# bashrc
+!.bashrc.d
+!.bashrc.d/**
+
+
+# neovim
 !.config/nvim
 !.config/nvim/**
 .config/nvim/.netrwhist
 .config/nvim/plugged/
+.config/nvim/.init.vim.swp
 
-!.bashrc.d
-!.bashrc.d/**
-
+# scripts
 !scripts
 !scripts/**
+
+# vscode
+!.config/Code/
+!.config/Code/User/
+!.config/Code/User/settings.json
+.config/Code/*
+!.config/Code/User
+.config/Code/User/*
+!.config/Code/User/settings.json

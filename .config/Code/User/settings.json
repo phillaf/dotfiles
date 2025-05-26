@@ -1,0 +1,12 @@
+{
+    "git.autofetch": true,
+    "editor.rulers": [
+        80
+    ],
+    "vim.hlsearch": true,
+    "vim.neovimConfigPath": "~/.config/nvim/init.vim",
+    "vim.neovimUseConfigFile": true,
+    "vim.smartRelativeLine": true,
+    "vim.visualstar": true,
+    "vim.visualModeKeyBindings": [],
+}
