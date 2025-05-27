@@ -1,7 +1,7 @@
 #!/bin/bash
 
-KEY_NAME="id_rsa.test"
-PUB_KEY_NAME="id_rsa.pub.test"
+KEY_NAME="id_rsa"
+PUB_KEY_NAME="id_rsa.pub"
 SSH_DIR="$HOME/.ssh"
 PRIVATE_KEY_PATH="$SSH_DIR/$KEY_NAME"
 PUBLIC_KEY_PATH="$SSH_DIR/$PUB_KEY_NAME"
@@ -18,5 +18,8 @@ cat > "$PUBLIC_KEY_PATH"
 chmod 644 "$PUBLIC_KEY_PATH"
 
 # Add the key to the ssh-agent
-# eval "$(ssh-agent -s)"
-# ssh-add "$PRIVATE_KEY_PATH"
+ eval "$(ssh-agent -s)"
+ ssh-add "$PRIVATE_KEY_PATH"
+
+git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME remote set-url origin git@github.com:phillaf/dotfiles.git
+git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME push --set-upstream origin main
