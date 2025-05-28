@@ -1,5 +1,8 @@
 alias space="du -h . | grep '[0-9\.]\+G'"
 
+alias cos="gh copilot suggest"
+alias coe="gh copilot explain"
+
 alias c="config"
 alias ca="config add -A"
 alias cs="config status"

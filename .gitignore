@@ -13,6 +13,7 @@ README.md
 .config/dconf
 .config/evolution
 .config/flameshot
+.config/gh
 .config/goa-1.0
 .config/gtk-3.0
 .config/ibus
