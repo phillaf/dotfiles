@@ -1,0 +1,8 @@
+[/]
+accent-color='yellow'
+clock-format='24h'
+color-scheme='prefer-dark'
+enable-hot-corners=false
+gtk-enable-primary-paste=false
+locate-pointer=true
+toolkit-accessibility=false
