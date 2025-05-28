@@ -53,7 +53,6 @@ noremap <Leader>vs :source $MYVIMRC<CR>
 noremap ; :
 nnoremap Q @q
 nnoremap <Leader>n :set hlsearch!<CR>
-noremap <C-c> :bp<bar>sp<bar>bn<bar>bd<CR>
 noremap <C-p> :FZF<CR>
 noremap <Leader>gg :grep -rn --exclude={tags,.php_cs.cache} --exclude-dir={vendor,.git,.phpcd} 
 noremap <Leader>fa :grep -rn --exclude={tags,.php_cs.cache} --exclude-dir={vendor,.git,.phpcd} <cword> ./
@@ -69,7 +68,7 @@ noremap <Leader>fa :grep -rn --exclude={tags,.php_cs.cache} --exclude-dir={vendo
 :nnoremap <A-l> <C-w>l
 
 " Exit terminal
-:tnoremap <Esc> <C-\><C-n>
+:noremap <Esc> <C-\><C-n>
 
 " Expand current path
 noremap <Leader>p :put=expand('%:p')<CR>

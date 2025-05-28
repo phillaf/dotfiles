@@ -9,4 +9,10 @@
     "vim.smartRelativeLine": true,
     "vim.visualstar": true,
     "vim.visualModeKeyBindings": [],
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
 }
