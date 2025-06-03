@@ -15,4 +15,14 @@
         "markdown": false,
         "scminput": false
     },
+    "vim.easymotion": true,
+    "vim.leader": "<Space>",
+    "vim.vimrc.enable": true,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["-"],
+            "commands": ["vsnetrw.open"],
+            "when": "editorLangId != vsnetrw"
+        }
+    ],
 }

@@ -10,8 +10,10 @@ README.md
 !.config/**/
 
 # Softwares I don't want to backup
+.config/astro
 .config/dconf
 .config/evolution
+.config/filezilla
 .config/flameshot
 .config/gh
 .config/goa-1.0

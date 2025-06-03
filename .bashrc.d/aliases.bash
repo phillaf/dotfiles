@@ -19,6 +19,6 @@ alias gs='git status'
 alias gr='git difftool HEAD'
 
 alias vim='nvim'
-alias diff='nvim -d'
+alias vimdiff='nvim -d'
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'

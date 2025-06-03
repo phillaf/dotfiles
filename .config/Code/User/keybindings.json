@@ -8,4 +8,9 @@
         "key": "ctrl+shift+tab",
         "command": "workbench.action.previousEditor"
     },
+    {
+        "key": "space",
+        "command": "-breadcrumbs.revealFocused",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
 ]
