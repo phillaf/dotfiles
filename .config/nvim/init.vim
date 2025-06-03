@@ -43,7 +43,9 @@ set noerrorbells
 set hlsearch
 set hidden
 :filetype on
-"set spell spelllang=en_ca
+set spell spelllang=en_ca
+
+set clipboard=unnamedplus
 
 " Generic Hotkeys
 let mapleader = "\<Space>"

@@ -1,28 +1,33 @@
 {
-    "git.autofetch": true,
-    "editor.rulers": [
-        80
-    ],
-    "vim.hlsearch": true,
-    "vim.neovimConfigPath": "~/.config/nvim/init.vim",
-    "vim.neovimUseConfigFile": true,
-    "vim.smartRelativeLine": true,
-    "vim.visualstar": true,
-    "vim.visualModeKeyBindings": [],
-    "github.copilot.enable": {
-        "*": false,
-        "plaintext": false,
-        "markdown": false,
-        "scminput": false
-    },
-    "vim.easymotion": true,
-    "vim.leader": "<Space>",
-    "vim.vimrc.enable": true,
-    "vim.normalModeKeyBindings": [
-        {
-            "before": ["-"],
-            "commands": ["vsnetrw.open"],
-            "when": "editorLangId != vsnetrw"
-        }
-    ],
+  "editor.rulers": [
+    80
+  ],
+  "git.autofetch": true,
+  "github.copilot.enable": {
+    "*": false,
+    "markdown": false,
+    "plaintext": false,
+    "scminput": false
+  },
+  "vim.easymotion": true,
+  "vim.hlsearch": true,
+  "vim.leader": "<Space>",
+  "vim.neovimConfigPath": "~/.config/nvim/init.vim",
+  "vim.neovimUseConfigFile": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "-"
+      ],
+      "commands": [
+        "vsnetrw.open"
+      ],
+      "when": "editorLangId != vsnetrw"
+    }
+  ],
+  "vim.smartRelativeLine": true,
+  "vim.useSystemClipboard": true,
+  "vim.vimrc.enable": true,
+  "vim.visualModeKeyBindings": [],
+  "vim.visualstar": true
 }
