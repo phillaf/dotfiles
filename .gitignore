@@ -21,6 +21,7 @@ README.md
 .config/ibus
 .config/org.gnome.Ptyxis
 .config/pulse
+.config/totem
 
 # bashrc
 !.bashrc.d/**
