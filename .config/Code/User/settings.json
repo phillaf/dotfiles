@@ -9,6 +9,8 @@
     "plaintext": false,
     "scminput": false
   },
+  "rust-analyzer.server.path": "rust-analyzer",
+  "rust-analyzer.cargo.buildScripts.enable": true,
   "vim.easymotion": true,
   "vim.hlsearch": true,
   "vim.leader": "<Space>",

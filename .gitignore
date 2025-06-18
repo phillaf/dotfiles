@@ -19,6 +19,7 @@ README.md
 .config/goa-1.0
 .config/gtk-3.0
 .config/ibus
+.config/InputLeap
 .config/org.gnome.Ptyxis
 .config/pulse
 .config/totem
