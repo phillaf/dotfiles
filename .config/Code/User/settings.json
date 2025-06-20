@@ -31,5 +31,6 @@
   "vim.useSystemClipboard": true,
   "vim.vimrc.enable": true,
   "vim.visualModeKeyBindings": [],
-  "vim.visualstar": true
+  "vim.visualstar": true,
+  "github.copilot.chat.codesearch.enabled": true
 }
