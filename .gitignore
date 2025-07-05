@@ -23,6 +23,7 @@ README.md
 .config/org.gnome.Ptyxis
 .config/pulse
 .config/totem
+.config/Windsurf
 
 # bashrc
 !.bashrc.d/**
