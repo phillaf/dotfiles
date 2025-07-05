@@ -20,3 +20,5 @@
 	enabled = true
 [init]
 	defaultBranch = main
+[includeIf "gitdir:~/Workspace/"]
+    path = ~/Workspace/.gitconfig
