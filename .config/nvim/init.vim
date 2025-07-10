@@ -59,7 +59,11 @@ noremap <C-p> :FZF<CR>
 noremap <Leader>gg :grep -rn --exclude={tags,.php_cs.cache} --exclude-dir={vendor,.git,.phpcd} 
 noremap <Leader>fa :grep -rn --exclude={tags,.php_cs.cache} --exclude-dir={vendor,.git,.phpcd} <cword> ./
 
-" Window navigation
+" Scroll faster!
+nnoremap <C-e> 10<C-e>
+nnoremap <C-y> 10<C-y>
+
+" Window navigation
 :tnoremap <A-h> <C-\><C-n><C-w>h
 :tnoremap <A-j> <C-\><C-n><C-w>j
 :tnoremap <A-k> <C-\><C-n><C-w>k
