@@ -1,4 +1,4 @@
-# Dotfiles for Fedora 41
+# Dotfiles for Fedora 42
 
 I don't recommend using these unless you understand and want their behavior.
 
